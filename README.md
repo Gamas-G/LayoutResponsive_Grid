@@ -1,5 +1,5 @@
 # LayoutResponsive_Grid
-Diseño Responsive utilizando Grid. HTML y CSS
+Practica diseño Responsive utilizando Grid. HTML y CSS
 
 Vista Web
 

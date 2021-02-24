@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #E9ECF4;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 1.25em auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap:1.25em;
+
+    grid-template-areas: 
+    'header header header'
+    'contenido contenido sidebar'
+    'contenido contenido sidebar'
+    'contenido contenido sidebar'
+    'widget1 widget2 sidebar'
+    'footer footer footer';
+}
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer{
+    background-color: #fff;
+    padding: 1.25em;
+    border-radius: .25em;
+    text-align: center;
+}
+.contenedor .header{
+    grid-area: header;
+}
+.contenedor .contenido{
+    grid-area: contenido;
+}
+.contenedor .sidebar{
+    grid-area: sidebar;
+}
+.contenedor .widget-1{
+    grid-area: widget1;
+}
+.contenedor .widget-2{
+    grid-area: widget2;
+}
+.contenedor .footer{
+    grid-area: footer;
+}
+.contenedor .header,
+.contenedor .footer{
+    /* grid-column: span 3; */
+    background-color: #12203E;
+    color: #fff;
+    text-align: center;
+
+}
+.contenedor .contenido{
+    /* grid-column: span 2; */
+}
+.contenedor .sidebar{
+    /* grid-column: 3 / 4;
+    grid-row: span 2; */
+    background-color: #FAA43D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 6.25em;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+    background-color: #55a8fd;
+    color: #fff;
+    height: 6.25em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width:768px){
+    .contenedor{
+        grid-template-areas: 
+        'header header header'
+        'contenido contenido contenido'
+        'contenido contenido contenido'
+        'contenido contenido contenido'
+        'sidebar sidebar sidebar'
+        'widget1 widget1 widget2'
+        'footer footer footer';
+    }
+}
+
+/* @media screen and (max-width:768px){
+    .contenedor .contenido{
+        grid-column: span 3;
+
+    }
+    .contenedor .sidebar{
+        grid-column: span 3;
+    }
+    .contenedor .widget-1{
+        grid-column: span 2;
+    }
+} */
